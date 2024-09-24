@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'calculator_design.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,19 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CalculatorDesign(),
+      home: CalculatorApp(),
     );
   }
 }
 
-class CalculatorDesign extends StatefulWidget {
-  const CalculatorDesign({super.key});
+class CalculatorApp extends StatefulWidget {
+  const CalculatorApp({super.key});
 
   @override
-  State<CalculatorDesign> createState() => _CalculatorDesignState();
+  State<CalculatorApp> createState() => _CalculatorAppState();
 }
 
-class _CalculatorDesignState extends State<CalculatorDesign> {
+class _CalculatorAppState extends State<CalculatorApp> {
   Widget calcbutton(String btntxt, Color btncolors, Color textcolor) {
     return Container(
       child: MaterialButton(
@@ -42,7 +41,8 @@ class _CalculatorDesignState extends State<CalculatorDesign> {
           borderRadius: BorderRadius.circular(10),
         ),
         color: btncolors,
-        padding: EdgeInsets.all(0),minWidth: 50,
+        padding: EdgeInsets.all(0),
+        minWidth: 50,
       ),
     );
   }
@@ -67,7 +67,8 @@ class _CalculatorDesignState extends State<CalculatorDesign> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               //Calculator disply
-              Row(
+              Row
+                (
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Padding(
